@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>もしもし — 招待が とどいてるよ</title>
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --cream: #F3EADA;
+    --cream-deep: #E9DcC6;
+    --ink: #33261C;
+    --ink-soft: #8A7A6A;
+    --vermilion: #D8452C;
+    --paper: #FBF6EC;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: "Hiragino Maru Gothic ProN", "BIZ UDGothic", "Yu Gothic", sans-serif;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  .card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: 18px;
+    box-shadow: 4px 4px 0 rgba(51,38,28,.18);
+    max-width: 400px;
+    width: 100%;
+    padding: 32px 26px;
+    transform: rotate(-.4deg);
+    text-align: center;
+  }
+  .phone { font-size: 44px; }
+  h1 {
+    font-size: 22px;
+    margin: 10px 0 4px;
+    letter-spacing: .06em;
+  }
+  .sub { color: var(--ink-soft); font-size: 13px; margin-bottom: 22px; }
+  ol {
+    text-align: left;
+    list-style: none;
+    counter-reset: step;
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  ol li {
+    counter-increment: step;
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  ol li::before {
+    content: counter(step);
+    flex: 0 0 auto;
+    width: 22px; height: 22px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 12px; font-weight: 700;
+    background: var(--cream-deep);
+  }
+  .tf {
+    display: inline-block;
+    background: var(--vermilion);
+    color: #fff;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    padding: 12px 26px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: .04em;
+    box-shadow: 3px 3px 0 rgba(51,38,28,.25);
+  }
+  .tf.disabled {
+    background: var(--cream-deep);
+    color: var(--ink-soft);
+    box-shadow: none;
+    pointer-events: none;
+  }
+  .note { font-size: 11.5px; color: var(--ink-soft); margin-top: 14px; line-height: 1.7; }
+  .foot { margin-top: 22px; font-size: 11px; }
+  .foot a { color: var(--ink-soft); }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="phone">📞</div>
+    <h1>もしもし の 招待だよ</h1>
+    <p class="sub">友達から「もしもし」の招待が とどいてる</p>
+    <ol>
+      <li>下のボタンから TestFlight で アプリを入れる</li>
+      <li>アプリを開いて サインインする</li>
+      <li>もういちど この招待リンクを ひらく<br><small style="color:var(--ink-soft)">→ 自動で友達申請の画面につながるよ</small></li>
+    </ol>
+    <!-- TODO: TestFlightの公開リンク発行後に href を差し替える -->
+    <a class="tf disabled" href="#">TestFlight リンクは 準備中</a>
+    <p class="note">いまは招待制のテスト中。リンクが「準備中」のときは、招待をくれた友達に こえかけてね。</p>
+    <p class="foot"><a href="https://zo-kikaku.com/moshimoshi">もしもし について →</a></p>
+  </main>
+</body>
+</html>

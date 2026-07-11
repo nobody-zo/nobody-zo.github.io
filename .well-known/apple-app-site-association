@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["LT77XBL34M.com.zo-kikaku.moshimoshi"],
+        "components": [
+          { "/": "/add", "comment": "moshimoshi invite link -> app route /add" }
+        ]
+      }
+    ]
+  }
+}
